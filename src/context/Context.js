@@ -18,12 +18,12 @@ const ContextProvider = ({children}) => {
 export default ContextProvider
 
 const reducer = (user, action) =>{
-    if(action.type == 'USER_LOGIN'){
+    if(action.type === 'USER_LOGIN'){
         console.log(action);
         
         return {...user, isLogin:true, user:action.user}
     }
-    else if(action.type == 'USER_LOGOUT'){
+    else if(action.type === 'USER_LOGOUT'){
         return {...user, isLogin: false, user: {}}
     }
     else{
